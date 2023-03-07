@@ -5,7 +5,6 @@ def upgma(d, ids):
     while d.shape[0] > 1:
         n = d.shape[0]
         i, j = find_lowest_value(d)
-        print(f"{i} {j}")
 
         dist_node_to_u = d[i, j]/2
         new_node = f"({ids[i]}: {round(dist_node_to_u, 4)}, {ids[j]}: {round(dist_node_to_u, 4)})"
