@@ -18,7 +18,7 @@ def upgma(d, ids):
         dprime[1:, 1:] = np.delete(np.delete(d, ij_indexes, axis=1), 
                             ij_indexes, axis=0)
         
-        dist_k_to_u = (d[i] + d[j])/2
+        dist_k_to_u = (d[i] + d[j]) / 2
         dist_k_to_u = np.delete(dist_k_to_u, ij_indexes) 
         dist_k_to_u = np.concatenate([[0], dist_k_to_u])
         
@@ -29,7 +29,7 @@ def upgma(d, ids):
         ids = new_ids.copy()
 
     tree = ids[0]
-    return tree
+    return tree + ";"
 
 def find_lowest_value(d):
     lowest_value = np.Inf
